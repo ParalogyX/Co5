@@ -22,8 +22,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.0463068"
-     inkscape:cx="279.07684"
-     inkscape:cy="453.49986"
+     inkscape:cx="619.32122"
+     inkscape:cy="288.1564"
      inkscape:window-width="2400"
      inkscape:window-height="1271"
      inkscape:window-x="2391"
@@ -82,13 +82,13 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.12683px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.30303;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        x="1.1430843"
-       y="-93.093491"
+       y="-93.196297"
        id="text56-0-1-4"
        transform="rotate(-90)"><tspan
          id="tspan56-0-6-7"
          style="stroke:#0000ff;stroke-width:0.30303;stroke-opacity:1"
          x="1.1430843"
-         y="-93.093491">Aeolian</tspan></text>
+         y="-93.196297">Aeolian</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.12683px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.30303;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
@@ -307,11 +307,11 @@
     <text
        font-size="4.5px"
        id="text62"
-       dx="0 0 0"
+       dx="0 0 0 0"
        style="fill:#00489a;fill-opacity:1;stroke:none;stroke-width:0.9;stroke-opacity:1"
        x="-0.036002297"
        y="-46.654293"
-       transform="rotate(20)">#v°</text>
+       transform="rotate(20)">#iv°</text>
     <text
        font-size="4.5px"
        id="text63"
@@ -408,14 +408,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.12683px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.30303;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-       x="2.155997"
-       y="-93.446159"
+       x="2.180074"
+       y="-93.816956"
        id="text56-84-5-1"
        transform="rotate(-150)"><tspan
          id="tspan56-1-7-4"
          style="stroke:#0000ff;stroke-width:0.30303;stroke-opacity:1"
-         x="2.155997"
-         y="-93.446159">Locrian</tspan></text>
+         x="2.180074"
+         y="-93.816956">Locrian</tspan></text>
   </g>
   <rect
      style="fill:none;stroke:none;stroke-width:2.09967"
