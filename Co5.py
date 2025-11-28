@@ -4,6 +4,12 @@ from PySide6.QtSvgWidgets import QSvgWidget
 from PySide6.QtCore import Qt, QRectF
 from PySide6.QtGui import QPainter, QPalette, QColor
 
+import pathlib
+cur_path = pathlib.Path(__file__).parent.resolve()
+
+
+
+
 
 class StepSlider(QSlider):
     def __init__(self, *args, step=30, **kwargs):
@@ -23,12 +29,18 @@ class SvgRotator(QWidget):
     def __init__(self):
         super().__init__()
 
-        # Load three layered SVG widgets
-        self.svg1 = QSvgWidget("111.svg")
-        self.svg2 = QSvgWidget("22.svg")
-        self.svg3 = QSvgWidget("33.svg")
+        # app and picture size
+        self.X = 800
+        self.Y = 800
+        self.x = 0.9 * self.X
+        self.y = 0.9 * self.Y
 
-        self.svg1.setFixedSize(800, 800)  # change freely
+        # Load three layered SVG widgets
+        self.svg1 = QSvgWidget(str(pathlib.Path.joinpath(cur_path, '11.svg')))
+        self.svg2 = QSvgWidget(str(pathlib.Path.joinpath(cur_path, '22.svg')))
+        self.svg3 = QSvgWidget(str(pathlib.Path.joinpath(cur_path, '33.svg')))
+
+        self.svg1.setFixedSize(self.x, self.y)  # change freely
         self.svg1.setAutoFillBackground(True)
         pal = self.svg1.palette()
         pal.setColor(QPalette.Window, QColor("white"))
@@ -36,7 +48,7 @@ class SvgRotator(QWidget):
 
         # All SVGs same size + stacked
         for svg in (self.svg2, self.svg3):
-            svg.setFixedSize(800, 800)  # change freely
+            svg.setFixedSize(self.x, self.y)  # change freely
             svg.setAttribute(Qt.WA_TranslucentBackground, True)
 
         # Slider panel
@@ -67,7 +79,7 @@ class SvgRotator(QWidget):
         layout.addLayout(slider_layout)
         layout.addStretch()
 
-        self.setFixedSize(1020, 1080)
+        self.setFixedSize(self.X, self.Y)
         self.setWindowTitle("Circle of Fifths")
 
 
