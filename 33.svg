@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="198mm"
+   height="198mm"
+   viewBox="-100 -100 200 200"
+   version="1.1"
+   id="svg72"
+   sodipodi:docname="33.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview72"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.0463068"
+     inkscape:cx="145.27288"
+     inkscape:cy="356.96987"
+     inkscape:window-width="2400"
+     inkscape:window-height="1271"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg72" />
+  <style
+     id="style1">
+    .seg {
+      stroke: #000000;
+      stroke-width: 1;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+    text {
+      font-family: Arial, sans-serif;
+      fill: #000000;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+  </style>
+  <!-- background -->
+  <!-- sector templates (30° wedges) -->
+  <defs
+     id="defs1">
+    <!-- outer radius 90 -->
+    <path
+       id="sector90"
+       d="M 0,0 L 0,-90 A 90,90 0 0 1 45,-77.942 Z" />
+    <!-- middle radius 70 -->
+    <path
+       id="sector70"
+       d="M 0,0 L 0,-70 A 70,70 0 0 1 35,-60.622 Z" />
+    <!-- inner radius 50 -->
+    <path
+       id="sector50"
+       d="M 0,0 L 0,-50 A 50,50 0 0 1 25,-43.301 Z" />
+  </defs>
+  <!-- color sequence (same for all 3 rings, per key family)
+       C, G, D, A, E, B, F#, C#, Ab, Eb, Bb, F -->
+  <!-- major ring (outer: between r=70 and r=90) -->
+  <!-- cut inner edge of major ring -->
+  <!-- minor ring (middle: between r=50 and r=70) -->
+  <!-- cut inner edge of minor ring -->
+  <!-- diminished ring (inner colored ring: between r=30 and r=50) -->
+  <!-- central white disk & border -->
+  <!-- center dot (1–2 mm) -->
+  <path
+     d="m 18.11719,-67.614536 -5.175995,19.318113 a 50,50 0 0 1 22.414001,12.941032 L 49.497313,-49.497509 A 70,70 0 0 0 18.11719,-67.614536 Z"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path147" />
+  <path
+     d="m -18.117386,-67.615058 a 70,70 0 0 0 -8.670679,2.943469 70,70 0 0 1 8.670679,-2.942947 z"
+     style="stroke:#000000;stroke-opacity:1;fill:none;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path134" />
+  <path
+     d="m -23.293903,-86.93317 5.176517,19.318112 -5.175995,-19.318112 a 90,90 0 0 1 -5.22e-4,0 z"
+     style="stroke:#000000;stroke-opacity:1;fill:none;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path133" />
+  <path
+     d="m -63.639104,-63.639626 14.141595,14.142117 a 70,70 0 0 1 31.380123,-18.117549 l -5.176517,-19.318112 a 90,90 0 0 0 -40.345201,23.293544 z"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path132" />
+  <path
+     d="m -12.940869,-48.295901 5.1759955,19.318112 a 30,30 0 0 1 5.22e-4,0 z"
+     style="stroke:#000000;stroke-opacity:1;fill:none;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path105" />
+  <path
+     d="m -12.940869,-48.296423 -5.176517,-19.318113 a 70,70 0 0 0 -8.670679,2.942947 70,70 0 0 0 -22.709444,15.17408 l 14.142118,14.142118 h 5.22e-4 a 50,50 0 0 1 16.220658,-10.83848 50,50 0 0 1 6.193342,-2.102552 z"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path103" />
+  <path
+     d="m -12.940869,-48.296423 a 50,50 0 0 0 -6.193342,2.102552 50,50 0 0 1 6.193342,-2.10203 z"
+     style="fill:none;stroke:#000000;stroke-opacity:1;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path102" />
+  <path
+     d="M 6.5260093,-49.572152 A 50,50 0 0 0 1.6312006e-4,-50.000179 50,50 0 0 0 -6.5262051,-49.572152 a 50,50 0 0 1 13.0522144,0 z"
+     style="stroke:#000000;stroke-opacity:1;fill:none;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path101" />
+  <path
+     d="m 6.5265313,-49.572152 a 50,50 0 0 1 6.4146637,1.275729 l 5.175995,-19.318635 a 70,70 0 0 0 -36.234576,0 l 5.176517,19.318635 a 50,50 0 0 1 6.4146639,-1.275729 50,50 0 0 1 6.52636822006,-0.428027 50,50 0 0 1 6.52584617994,0.428027 50,50 0 0 1 5.22e-4,0 z"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path100" />
+  <path
+     d="m 12.940673,-48.295901 v -5.22e-4 a 50,50 0 0 0 -6.4141417,-1.275729 50,50 0 0 1 6.4141417,1.276251 z"
+     style="stroke:#000000;stroke-opacity:1;fill:none;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path99" />
+  <path
+     d="m 7.7646778,-28.977789 5.1765172,-19.318112 a 50,50 0 0 1 -5.22e-4,0 z"
+     style="stroke:#000000;stroke-opacity:1;fill:none;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path97" />
+  <path
+     d="m 7.7646778,-28.977789 5.1759952,-19.318112 a 50,50 0 0 0 -25.881542,-5.22e-4 v 5.22e-4 l 5.1765175,19.318112 A 30,30 0 0 1 1.6312006e-4,-29.999834 30,30 0 0 1 7.7646778,-28.977789 Z"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path96" />
+  <path
+     d="M 1.6312006e-4,1.6312006e-4 1.060835,-1.0605087 A 1.5,1.5 0 0 0 0.38851935,-1.448865 Z"
+     style="stroke-width:0.55999999;stroke-dasharray:none"
+     id="path95" />
+  <path
+     d="M 1.6312006e-4,1.6312006e-4 0.38851935,-1.448865 A 1.5,1.5 0 0 0 1.6312006e-4,-1.5000194 1.5,1.5 0 0 0 -0.38819311,-1.448865 Z"
+     style="stroke-width:0.55999999;stroke-dasharray:none"
+     id="path94" />
+  <path
+     d="M 1.6312006e-4,1.6312006e-4 -0.38819311,-1.448865 a 1.5,1.5 0 0 0 -0.67231559,0.3883563 z"
+     style="stroke-width:0.55999999;stroke-dasharray:none"
+     id="path93" />
+  <path
+     d="M 1.6312006e-4,1.6312006e-4 -1.0605087,-1.0605087 a 1.5,1.5 0 0 0 -0.3883563,0.67231559 z"
+     style="stroke-width:0.55999999;stroke-dasharray:none"
+     id="path92" />
+  <path
+     d="M 1.6312006e-4,1.6312006e-4 -1.448865,-0.38819311 a 1.5,1.5 0 0 0 -0.051154,0.38835623006 1.5,1.5 0 0 0 0.051154,0.38783424994 1.5,1.5 0 0 1 0,5.2198e-4 z"
+     style="stroke-width:0.55999999;stroke-dasharray:none"
+     id="path91" />
+  <path
+     d="M 1.6312006e-4,1.6312006e-4 -1.448865,0.38851935 A 1.5,1.5 0 0 0 -1.0605087,1.060835 Z"
+     style="stroke-width:0.55999999;stroke-dasharray:none"
+     id="path90" />
+  <path
+     d="M 1.6312006e-4,1.6312006e-4 -1.0605087,1.060835 a 1.5,1.5 0 0 0 0.67231559,0.3878342 z"
+     style="stroke-width:0.55999999;stroke-dasharray:none"
+     id="path89" />
+  <path
+     d="M 1.6312006e-4,1.6312006e-4 -0.38819311,1.4486692 A 1.5,1.5 0 0 0 1.6312006e-4,1.4998237 1.5,1.5 0 0 0 0.38799737,1.4486692 Z"
+     style="stroke-width:0.55999999;stroke-dasharray:none"
+     id="path88" />
+  <path
+     d="M 1.6312006e-4,1.6312006e-4 0.38799737,1.4486692 A 1.5,1.5 0 0 0 1.060835,1.060835 Z"
+     style="stroke-width:0.55999999;stroke-dasharray:none"
+     id="path87" />
+  <path
+     d="M 1.6312006e-4,1.6312006e-4 1.060835,1.060835 a 1.5,1.5 0 0 0 0.3878342,-0.67231565 1.5,1.5 0 0 1 0,-5.2198e-4 z"
+     style="stroke-width:0.55999999;stroke-dasharray:none"
+     id="path86" />
+  <path
+     d="M 1.4486692,-0.38819311 A 1.5,1.5 0 0 0 1.060835,-1.0605087 L 1.6312006e-4,1.6312006e-4 Z"
+     style="stroke-width:0.55999999;stroke-dasharray:none"
+     id="path85" />
+  <path
+     d="M 1.4486692,-0.38819311 1.6312006e-4,1.6312006e-4 1.4486692,0.38799737 A 1.5,1.5 0 0 0 1.4998237,1.6312006e-4 1.5,1.5 0 0 0 1.4486692,-0.38819311 Z"
+     style="stroke-width:0.55999999;stroke-dasharray:none"
+     id="path84" />
+  <path
+     d="m 23.293707,-86.93317 -5.176517,19.318112 v 5.22e-4 a 70,70 0 0 1 31.380123,18.117027 L 63.63943,-63.639626 A 90,90 0 0 0 23.293707,-86.93317 Z"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path76" />
+  <path
+     d="M 1.6312006e-4,-89.999827 A 90,90 0 0 0 -23.293381,-86.93317 l 5.175995,19.318112 a 70,70 0 0 1 36.234576,0 L 23.293707,-86.93317 A 90,90 0 0 0 1.6312006e-4,-89.999827 Z"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:1.18222227;stroke-dasharray:none"
+     id="path75" />
+  <!-- ===== ROTATED TEXT ===== -->
+  <!-- Major keys (outer ring, ~80 radius) -->
+  <!-- Minor keys (~60 radius) -->
+  <!-- Diminished (~40 radius) -->
+  <circle
+     cx="2.7833162e-06"
+     cy="2.7833162e-06"
+     r="1.5"
+     fill="#000000"
+     id="circle37-4"
+     style="stroke-width:0.55999999;stroke-dasharray:none" />
+  <rect
+     style="fill:none;stroke:none;stroke-width:2.09967"
+     id="rect1"
+     width="199.92053"
+     height="199.92055"
+     x="-98.950165"
+     y="-98.950165" />
+</svg>

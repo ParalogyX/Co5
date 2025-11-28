@@ -24,11 +24,11 @@ class SvgRotator(QWidget):
         super().__init__()
 
         # Load three layered SVG widgets
-        self.svg1 = QSvgWidget("1.svg")
-        self.svg2 = QSvgWidget("2.svg")
-        self.svg3 = QSvgWidget("3.svg")
+        self.svg1 = QSvgWidget("111.svg")
+        self.svg2 = QSvgWidget("22.svg")
+        self.svg3 = QSvgWidget("33.svg")
 
-        self.svg1.setFixedSize(1000, 1000)  # change freely
+        self.svg1.setFixedSize(800, 800)  # change freely
         self.svg1.setAutoFillBackground(True)
         pal = self.svg1.palette()
         pal.setColor(QPalette.Window, QColor("white"))
@@ -36,7 +36,7 @@ class SvgRotator(QWidget):
 
         # All SVGs same size + stacked
         for svg in (self.svg2, self.svg3):
-            svg.setFixedSize(1000, 1000)  # change freely
+            svg.setFixedSize(800, 800)  # change freely
             svg.setAttribute(Qt.WA_TranslucentBackground, True)
 
         # Slider panel
@@ -44,7 +44,7 @@ class SvgRotator(QWidget):
         self.sliders = []
 
         
-        slider = StepSlider(Qt.Horizontal)
+        slider = StepSlider(Qt.Horizontal, step=10)
         slider.setRange(-180, 180)
         slider.setValue(0)  # initial angle
         slider.setSingleStep(30)
