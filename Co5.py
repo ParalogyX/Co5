@@ -1,126 +1,339 @@
 import sys
-from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QSlider
+import pathlib
+from PySide6.QtWidgets import (
+    QApplication, QWidget, QVBoxLayout, QHBoxLayout,
+    QSlider, QFileDialog, QPushButton, QGraphicsDropShadowEffect, QCheckBox
+)
 from PySide6.QtSvgWidgets import QSvgWidget
 from PySide6.QtCore import Qt, QRectF
-from PySide6.QtGui import QPainter, QPalette, QColor
+from PySide6.QtGui import (
+    QPainter, QImage, QPdfWriter, QIcon, QPixmap, QColor, QPageSize
+)
 
-import pathlib
 cur_path = pathlib.Path(__file__).parent.resolve()
 
 
-
-
-
+#################################################################
+# QSlider with snap-to-step behavior
+#################################################################
 class StepSlider(QSlider):
     def __init__(self, *args, step=30, **kwargs):
         super().__init__(*args, **kwargs)
         self.step = step
+        self.valueChanged.connect(self._snap_value)
 
-        self.valueChanged.connect(self._snapValue)  # internal filter
-
-    def _snapValue(self, value):
-        snapped = round(value / self.step) * self.step
-        if snapped != value:
+    def _snap_value(self, v: int):
+        snapped = round(v / self.step) * self.step
+        if snapped != v:
             self.blockSignals(True)
             self.setValue(snapped)
             self.blockSignals(False)
 
+
+#################################################################
+# Canvas for rendering only (no UI logic inside)
+#################################################################
+class WheelCanvas(QWidget):
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.parent = parent
+
+    def paintEvent(self, event):
+        painter = QPainter(self)
+        size = min(self.width(), self.height()) * self.parent.scale_UI
+        cx = self.width() * 0.5
+        cy = self.height() * 0.52
+        self.parent.draw_layers(painter, cx, cy, size)
+
+
+#################################################################
+# Main UI widget: three SVG layers + export + slider linking
+#################################################################
 class SvgRotator(QWidget):
     def __init__(self):
         super().__init__()
 
-        # app and picture size
-        self.X = 800
-        self.Y = 800
-        self.x = 0.9 * self.X
-        self.y = 0.9 * self.Y
+        # UI scale factor for the rendered wheel
+        self.scale_UI = 0.90
 
-        # Load three layered SVG widgets
-        self.svg1 = QSvgWidget(str(pathlib.Path.joinpath(cur_path, '11.svg')))
-        self.svg2 = QSvgWidget(str(pathlib.Path.joinpath(cur_path, '22.svg')))
-        self.svg3 = QSvgWidget(str(pathlib.Path.joinpath(cur_path, '33.svg')))
+        # Difference between sliders when linking is enabled
+        self.offset = 0
 
-        self.svg1.setFixedSize(self.x, self.y)  # change freely
-        self.svg1.setAutoFillBackground(True)
-        pal = self.svg1.palette()
-        pal.setColor(QPalette.Window, QColor("white"))
-        self.svg1.setPalette(pal)
+        # SVG layers
+        self.svg1 = QSvgWidget(str(cur_path / "11.svg"))
+        self.svg2 = QSvgWidget(str(cur_path / "22.svg"))
+        self.svg3 = QSvgWidget(str(cur_path / "33.svg"))
 
-        # All SVGs same size + stacked
-        for svg in (self.svg2, self.svg3):
-            svg.setFixedSize(self.x, self.y)  # change freely
-            svg.setAttribute(Qt.WA_TranslucentBackground, True)
+        for s in (self.svg1, self.svg2, self.svg3):
+            s.setAttribute(Qt.WA_TranslucentBackground, True)
 
-        # Slider panel
-        slider_layout = QHBoxLayout()
+        # ========================== Layout ==========================
+        main_layout = QVBoxLayout(self)
+        main_layout.setContentsMargins(20, 20, 20, 20)
+        main_layout.setSpacing(10)
+
+        # ---------------- Top row: sliders + save button -------------
+        top = QHBoxLayout()
+        main_layout.addLayout(top)
+
         self.sliders = []
 
-        
-        slider = StepSlider(Qt.Horizontal, step=10)
-        slider.setRange(-180, 180)
-        slider.setValue(0)  # initial angle
-        slider.setSingleStep(30)
-        slider.setTickInterval(30)
-        slider.valueChanged.connect(self.update)
-        self.sliders.append(slider)
-        slider_layout.addWidget(slider)
+        # Slider A
+        s = StepSlider(Qt.Horizontal, step=30)
+        s.setRange(-180, 180)
+        s.setValue(0)
+        s.setSingleStep(30)
+        s.setTickInterval(30)
+        s.valueChanged.connect(self.update_canvas)
+        self.sliders.append(s)
+        top.addWidget(s)
 
-        slider = StepSlider(Qt.Horizontal)
-        slider.setRange(-30, 150)
-        slider.setValue(0)  # initial angle
-        slider.setSingleStep(30)
-        slider.setTickInterval(30)
-        slider.valueChanged.connect(self.update)
-        self.sliders.append(slider)
-        slider_layout.addWidget(slider)
+        # Slider B
+        s = StepSlider(Qt.Horizontal)
+        s.setRange(-30, 150)
+        s.setValue(0)
+        s.setSingleStep(30)
+        s.setTickInterval(30)
+        s.valueChanged.connect(self.update_canvas)
+        self.sliders.append(s)
+        top.addWidget(s)
 
-        # Main layout
-        layout = QVBoxLayout(self)
-        layout.addLayout(slider_layout)
-        layout.addStretch()
+        # Export button
+        btn = QPushButton()
+        btn.setFixedSize(72, 72)
+        btn.setIcon(QIcon(str(cur_path / "save.svg")))
+        btn.setIconSize(btn.size() * 0.72)
+        btn.setStyleSheet("""
+            QPushButton {
+                background: white;
+                border: 1px solid #d0d0d0;
+                border-radius: 10px;
+            }
+            QPushButton:hover {
+                background: #e7f3ff;
+                border: 1px solid #5ba4ff;
+            }
+            QPushButton:pressed {
+                background: #d4e7ff;
+                border: 1px solid #2b7cff;
+            }
+        """)
 
-        self.setFixedSize(self.X, self.Y)
+        shadow = QGraphicsDropShadowEffect()
+        shadow.setBlurRadius(20)
+        shadow.setOffset(0, 0)
+        shadow.setColor(QColor(90, 150, 255, 160))
+        btn.setGraphicsEffect(shadow)
+
+        btn.clicked.connect(self.export_wheel)
+        top.addWidget(btn)
+
+        # ---------------- Canvas area (center wheel) ----------------
+        self.canvas = WheelCanvas(self)
+        main_layout.addWidget(self.canvas, 1)
+
+        # ---------------- Bottom row: link toggle -------------------
+        bottom = QHBoxLayout()
+        main_layout.addLayout(bottom)
+
+        self.linkBox = QCheckBox("Link sliders")
+        self.linkBox.setStyleSheet("""
+                QCheckBox {
+                    color: black;
+                    font-size: 16px;
+                }
+                QCheckBox::indicator {
+                    width: 20px;
+                    height: 20px;
+                }
+                QCheckBox::indicator:checked {
+                    background-color: #4da3ff;
+                    border: 1px solid #1b6bd8;
+                }
+                QCheckBox::indicator:unchecked {
+                    background-color: white;
+                    border: 1px solid #444;
+                }
+            """)
+
+        self.linkBox.stateChanged.connect(self.sync_sliders)
+        bottom.addWidget(self.linkBox)
+        bottom.addStretch()
+
+        # Window config
+        self.resize(800, 800)
+        self.setMinimumSize(600, 600)
         self.setWindowTitle("Circle of Fifths")
 
+    #################################################################
+    # Linked slider mechanics with cyclic rollover on the follower
+    #################################################################
+    def mirrorAtoB(self, v: int):
+        if self.linkBox.isChecked():
+            slave = self.sliders[1]
 
-    # def snapValue(self, value):
-    #     step = 30
-    #     snapped = round(value / step) * step  # Snap to 30
-    #     if snapped != value:                   # Avoid endless signal loop
-    #         self.sliders[0].blockSignals(True)
-    #         self.sliders[0].setValue(snapped)
-    #         self.sliders[0].blockSignals(False)
+            minv = slave.minimum()
+            maxv = slave.maximum()
+            span = maxv - minv
+
+            target = v + self.offset
+
+            # Wrap follower beyond its limits (cyclic behavior)
+            if span > 0:
+                while target < minv:
+                    target += span
+                while target > maxv:
+                    target -= span
+
+            # Snap follower to its defined step
+            step = getattr(slave, "step", 1)
+            if step > 0:
+                target = round(target / step) * step
+
+            # Final clamp for safety
+            target = max(minv, min(maxv, target))
+
+            slave.blockSignals(True)
+            slave.setValue(int(target))
+            slave.blockSignals(False)
+            self.update_canvas()
+
+    def mirrorBtoA(self, v: int):
+        if self.linkBox.isChecked():
+            slave = self.sliders[0]
+
+            minv = slave.minimum()
+            maxv = slave.maximum()
+            span = maxv - minv
+
+            target = v - self.offset
+
+            # Wrap follower beyond its limits (cyclic behavior)
+            if span > 0:
+                while target < minv:
+                    target += span
+                while target > maxv:
+                    target -= span
+
+            # Snap follower to its defined step
+            step = getattr(slave, "step", 1)
+            if step > 0:
+                target = round(target / step) * step
+
+            # Final clamp for safety
+            target = max(minv, min(maxv, target))
+
+            slave.blockSignals(True)
+            slave.setValue(int(target))
+            slave.blockSignals(False)
+            self.update_canvas()
+
+    def sync_sliders(self):
+        if self.linkBox.isChecked():
+            # Store offset at the moment linking is enabled
+            self.offset = self.sliders[1].value() - self.sliders[0].value()
+
+            # Activate mirrored movement with preserved offset
+            self.sliders[0].valueChanged.connect(self.mirrorAtoB)
+            self.sliders[1].valueChanged.connect(self.mirrorBtoA)
+
+            # When locked — both equal full-range
+            self.sliders[0].setRange(-180, 180)
+            self.sliders[1].setRange(-180, 180)
+
+        else:
+            # Restore original independent ranges
+            self.sliders[0].setRange(-180, 180)
+            self.sliders[1].setRange(-30, 150)
+
+            # Safe disconnect
+            try: self.sliders[0].valueChanged.disconnect(self.mirrorAtoB)
+            except TypeError: pass
+            try: self.sliders[1].valueChanged.disconnect(self.mirrorBtoA)
+            except TypeError: pass
 
 
-    def paintEvent(self, event):
-        painter = QPainter(self)
+    #################################################################
+    # Canvas repaint trigger
+    #################################################################
+    def update_canvas(self):
+        self.canvas.update()
 
-        # Center of drawing area
-        cx = self.width() / 2
-        cy = (self.height() / 2) + 20
-
-        # Drawing function for each rotated svg
-        def draw_svg(svg_widget, angle):
+    #################################################################
+    # Draw SVG layers (used for realtime + export rendering)
+    #################################################################
+    def draw_layers(self, painter: QPainter, cx: float, cy: float, size: float):
+        def draw(svg: QSvgWidget, angle: float):
             painter.save()
             painter.translate(cx, cy)
             painter.rotate(angle)
-            painter.translate(-svg_widget.width() / 2, -svg_widget.height() / 2)
-            svg_widget.renderer().render(painter, QRectF(0, 0, svg_widget.width(), svg_widget.height()))
+            r = QRectF(-size / 2, -size / 2, size, size)
+            svg.renderer().render(painter, r)
             painter.restore()
 
-        # Draw all three images on top of each other
-        draw_svg(self.svg1, self.sliders[0].value())
-        draw_svg(self.svg2, self.sliders[1].value())
-        draw_svg(self.svg3, 0)#self.sliders[2].value())
+        draw(self.svg1, self.sliders[0].value())
+        draw(self.svg2, self.sliders[1].value())
+        draw(self.svg3, 0)
+
+    #################################################################
+    # Export wheel as PNG (2048px) or PDF (A4 centered)
+    #################################################################
+    def export_wheel(self):
+        path, _ = QFileDialog.getSaveFileName(
+            self, "Export Wheel", "circle",
+            "PDF Document (*.pdf);;PNG Image (*.png)"
+        )
+        if not path:
+            return
+
+        # ---- PNG ----
+        if path.lower().endswith(".png"):
+            size = 2048
+            img = QImage(size, size, QImage.Format_ARGB32)
+            img.fill(Qt.white)
+
+            p = QPainter(img)
+            cx = size * 0.5
+            cy = size * 0.5
+            diameter = size * 0.90
+            self.draw_layers(p, cx, cy, diameter)
+            p.end()
+            img.save(path)
+            return
+
+        # ---- PDF ----
+        if path.lower().endswith(".pdf"):
+            pdf = QPdfWriter(path)
+            pdf.setPageSize(QPageSize(QPageSize.A4))
+
+            page_w = pdf.width()
+            page_h = pdf.height()
+            circle = int(page_w * 0.90)
+
+            img = QImage(circle, circle, QImage.Format_ARGB32)
+            img.fill(Qt.white)
+
+            p_img = QPainter(img)
+            cx = circle * 0.5
+            cy = circle * 0.5
+            diameter = circle * 0.90
+            self.draw_layers(p_img, cx, cy, diameter)
+            p_img.end()
+
+            p_pdf = QPainter(pdf)
+            x = (page_w - circle) // 2
+            y = (page_h - circle) // 2
+            p_pdf.drawImage(x, y, img)
+            p_pdf.end()
+            return
 
 
+#################################################################
+# Entry point
+#################################################################
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    app.setStyleSheet("""
-    QWidget {
-        background-color: white;
-    }
-""")
+    app.setStyleSheet("QWidget { background-color: white; }")
 
     window = SvgRotator()
     window.show()

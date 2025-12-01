@@ -1,1 +1,0 @@
-E:\Python-projects\Co5\.venv\Scripts\python.exe e:/Python-projects/Co5/Co5.py
