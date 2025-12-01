@@ -1,0 +1,60 @@
+body {
+    background: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#app {
+    width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.top-row, .bottom-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#saveBtn {
+    width: 72px;
+    height: 72px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid #ccc;
+}
+#saveBtn:hover { background:#e7f3ff; border:1px solid #5ba4ff; }
+#saveBtn:active { background:#d4e7ff; border:1px solid #2b7cff; }
+
+.save-menu {
+    position: absolute;
+    background: white;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    padding: 4px 0;
+    width: 120px;
+    margin-top: 6px;
+    z-index: 999;
+    font-size: 15px;
+}
+.save-menu.hidden { display:none; }
+
+.save-menu > div {
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.save-menu > div:hover {
+    background:#e7f3ff;
+}
+
+#wheelCanvas {
+    width:100%;
+    height:100%;
+    border:1px solid transparent;
+}
+
+input[type="range"] { flex:1; }
