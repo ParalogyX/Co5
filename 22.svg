@@ -5,7 +5,7 @@
    viewBox="-100 -100 200 200"
    version="1.1"
    id="svg72"
-   sodipodi:docname="22.svg"
+   sodipodi:docname="22_new.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -21,9 +21,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.73985063"
-     inkscape:cx="41.224537"
-     inkscape:cy="161.51909"
+     inkscape:zoom="1.4797013"
+     inkscape:cx="229.4382"
+     inkscape:cy="186.18623"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
@@ -348,81 +348,47 @@
        id="g1"
        style="fill:#701e22;fill-opacity:1;stroke:#701e22;stroke-opacity:1">
       <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.12683px;font-family:Arial;-inkscape-font-specification:Arial;fill:#701e22;fill-opacity:1;fill-rule:evenodd;stroke:#701e22;stroke-width:0.30303;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          x="1.1430843"
-         y="-93.196297"
-         id="text56-0-1-4"
-         transform="rotate(-90)"><tspan
-           id="tspan56-0-6-7"
-           style="stroke:#701e22;stroke-width:0.30303;stroke-opacity:1;fill:#701e22;fill-opacity:1"
-           x="1.1430843"
-           y="-93.196297">Aeolian</tspan></text>
+         y="-93.270000"
+         transform="rotate(-90)"
+         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+         id="text1">Aeolian</text>
       <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.12683px;font-family:Arial;-inkscape-font-specification:Arial;fill:#701e22;fill-opacity:1;fill-rule:evenodd;stroke:#701e22;stroke-width:0.30303;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          x="0.047721207"
          y="-93.274765"
-         id="text56-7-2-2"
-         transform="rotate(-60)"><tspan
-           id="tspan56-3-0-0"
-           style="stroke:#701e22;stroke-width:0.30303;stroke-opacity:1;fill:#701e22;fill-opacity:1"
-           x="0.047721207"
-           y="-93.274765">Dorian</tspan></text>
+         transform="rotate(-60)"
+         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+         id="text2">Dorian</text>
+      <!-- reference -->
       <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.12683px;font-family:Arial;-inkscape-font-specification:Arial;fill:#701e22;fill-opacity:1;fill-rule:evenodd;stroke:#701e22;stroke-width:0.30303;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          x="2.6406405"
-         y="-93.761276"
-         id="text56-8-8-6"
-         transform="rotate(30)"><tspan
-           id="tspan56-9-5-9"
-           style="stroke:#701e22;stroke-width:0.30303;stroke-opacity:1;fill:#701e22;fill-opacity:1"
-           x="2.6406405"
-           y="-93.761276">Lydian</tspan></text>
+         y="-93.274765"
+         transform="rotate(30)"
+         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+         id="text3">Lydian</text>
       <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.12683px;font-family:Arial;-inkscape-font-specification:Arial;fill:#701e22;fill-opacity:1;fill-rule:evenodd;stroke:#701e22;stroke-width:0.30303;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          x="0.80021536"
-         y="-93.027443"
-         id="text56-04-4"><tspan
-           id="tspan56-8-6"
-           style="stroke:#701e22;stroke-width:0.30303;stroke-opacity:1;fill:#701e22;fill-opacity:1"
-           x="0.80021536"
-           y="-93.027443">Ioninan</tspan></text>
+         y="-93.274765"
+         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+         id="text4">Ioninan</text>
       <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.12683px;font-family:Arial;-inkscape-font-specification:Arial;fill:#701e22;fill-opacity:1;fill-rule:evenodd;stroke:#701e22;stroke-width:0.30303;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          x="-0.36738724"
-         y="-93.456551"
-         id="text56-1-4-9"
-         transform="rotate(-30)"><tspan
-           id="tspan56-4-3-8"
-           style="stroke:#701e22;stroke-width:0.30303;stroke-opacity:1;fill:#701e22;fill-opacity:1"
-           x="-0.36738724"
-           y="-93.456551">Mixolydian</tspan></text>
+         y="-93.274765"
+         transform="rotate(-30)"
+         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+         id="text5">Mixolydian</text>
       <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.12683px;font-family:Arial;-inkscape-font-specification:Arial;fill:#701e22;fill-opacity:1;fill-rule:evenodd;stroke:#701e22;stroke-width:0.30303;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          x="0.64857215"
-         y="-93.623535"
-         id="text56-4-8-1"
-         transform="rotate(-120)"><tspan
-           id="tspan56-07-5-8"
-           style="stroke:#701e22;stroke-width:0.30303;stroke-opacity:1;fill:#701e22;fill-opacity:1"
-           x="0.64857215"
-           y="-93.623535">Phrygian</tspan></text>
+         y="-93.274765"
+         transform="rotate(-120)"
+         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+         id="text6">Phrygian</text>
       <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.12683px;font-family:Arial;-inkscape-font-specification:Arial;fill:#701e22;fill-opacity:1;fill-rule:evenodd;stroke:#701e22;stroke-width:0.30303;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          x="2.180074"
-         y="-93.816956"
-         id="text56-84-5-1"
-         transform="rotate(-150)"><tspan
-           id="tspan56-1-7-4"
-           style="stroke:#701e22;stroke-width:0.30303;stroke-opacity:1;fill:#701e22;fill-opacity:1"
-           x="2.180074"
-           y="-93.816956">Locrian</tspan></text>
+         y="-93.274765"
+         transform="rotate(-150)"
+         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+         id="text7">Locrian</text>
     </g>
   </g>
   <rect
