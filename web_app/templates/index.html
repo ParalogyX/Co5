@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/static/style.css">
+<script src="/static/wheel.js" defer></script>
+<title>Circle of Fifths — Web</title>
+</head>
+
+<body>
+<div id="app">
+
+<div class="top-row">
+    <input id="slider1" type="range" min="-180" max="180" step="30" value="0">
+    <input id="slider2" type="range" min="-30" max="150" step="30" value="0">
+
+    <button id="saveBtn"><img src="/static/save.svg"></button>
+
+    <div id="saveMenu" class="save-menu hidden">
+    <div data-type="png">Export PNG</div>
+    <div data-type="pdf">Export PDF</div>
+</div>
+</div>
+
+
+
+<canvas id="wheelCanvas"></canvas>
+
+<div class="bottom-row">
+    <label><input type="checkbox" id="linkBox"> Link sliders</label>
+</div>
+
+</div>
+
+</body>
+</html>
