@@ -33,16 +33,23 @@ function draw(){
 
     ctx.clearRect(0,0,canvas.width,canvas.height);
 
-    function render(img, angle){
+    function render(img, angle, k = 1.0){
         ctx.save();
-        ctx.translate(cx,cy);
-        ctx.rotate(angle*Math.PI/180);
-        ctx.drawImage(img, -size/2, -size/2, size, size);
+        ctx.translate(cx, cy);
+        ctx.rotate(angle * Math.PI / 180);
+
+        // base image size * scale factor
+        const w = size * k;
+        const h = size * k;
+
+        // draw so that the *scaled* image still remains centered
+        ctx.drawImage(img, -w / 2, -h / 2, w, h);
+
         ctx.restore();
     }
 
     render(img1, +s1.value);
-    render(img2, +s2.value);
+    render(img2, +s2.value, 1.016);
     render(img3, 0);
 }
 
