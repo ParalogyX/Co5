@@ -2,12 +2,14 @@ import sys
 import pathlib
 from PySide6.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QHBoxLayout,
-    QSlider, QFileDialog, QPushButton, QGraphicsDropShadowEffect, QCheckBox, QLabel
+    QSlider, QFileDialog, QPushButton, QGraphicsDropShadowEffect,
+    QCheckBox, QLabel
 )
 from PySide6.QtSvgWidgets import QSvgWidget
 from PySide6.QtCore import Qt, QRectF
 from PySide6.QtGui import (
-    QPainter, QImage, QPdfWriter, QIcon, QPixmap, QColor, QPageSize, QFont
+    QPainter, QImage, QPdfWriter, QIcon, QColor,
+    QPageSize, QFont
 )
 
 cur_path = pathlib.Path(__file__).parent.resolve()
@@ -38,7 +40,7 @@ class WheelCanvas(QWidget):
         super().__init__(parent)
         self.parent = parent
 
-        # ******** ADDED: Center label ********
+        # Center label
         self.tonality_label = QLabel("", self)
         self.tonality_label.setAlignment(Qt.AlignCenter)
         self.tonality_label.setStyleSheet("""
@@ -49,8 +51,8 @@ class WheelCanvas(QWidget):
         """)
 
     def resizeEvent(self, event):
-        # Keep label centered on resize
-        self.tonality_label.resize(self.width(), self.height()+16)
+        # Position label on screen
+        self.tonality_label.resize(self.width(), self.height() + 16)
         super().resizeEvent(event)
 
     def paintEvent(self, event):
@@ -62,7 +64,7 @@ class WheelCanvas(QWidget):
 
 
 #################################################################
-# Main UI widget: three SVG layers + export + slider linking
+# Main UI widget
 #################################################################
 class SvgRotator(QWidget):
     def __init__(self):
@@ -80,12 +82,12 @@ class SvgRotator(QWidget):
         for s in (self.svg1, self.svg2, self.svg3):
             s.setAttribute(Qt.WA_TranslucentBackground, True)
 
-        # ========================== Layout ==========================
+        # Layout
         main_layout = QVBoxLayout(self)
         main_layout.setContentsMargins(20, 20, 20, 20)
         main_layout.setSpacing(10)
 
-        # ---------------- Top row: sliders + save button -------------
+        # ---- Top Controls ----
         top = QHBoxLayout()
         main_layout.addLayout(top)
 
@@ -95,8 +97,6 @@ class SvgRotator(QWidget):
         s = StepSlider(Qt.Horizontal, step=30)
         s.setRange(-180, 180)
         s.setValue(0)
-        s.setSingleStep(30)
-        s.setTickInterval(30)
         s.valueChanged.connect(self.update_canvas)
         self.sliders.append(s)
         top.addWidget(s)
@@ -105,8 +105,6 @@ class SvgRotator(QWidget):
         s = StepSlider(Qt.Horizontal)
         s.setRange(-30, 150)
         s.setValue(0)
-        s.setSingleStep(30)
-        s.setTickInterval(30)
         s.valueChanged.connect(self.update_canvas)
         self.sliders.append(s)
         top.addWidget(s)
@@ -139,77 +137,66 @@ class SvgRotator(QWidget):
         btn.clicked.connect(self.export_wheel)
         top.addWidget(btn)
 
-        # ---------------- Canvas area ----------------
+        # ---- Canvas ----
         self.canvas = WheelCanvas(self)
         main_layout.addWidget(self.canvas, 1)
 
-        # ---------------- Bottom row: link toggle -------------------
+        # ---- Bottom ----
         bottom = QHBoxLayout()
         main_layout.addLayout(bottom)
 
         self.linkBox = QCheckBox("Link sliders")
         self.linkBox.setStyleSheet("""
-                QCheckBox {
-                    color: black;
-                    font-size: 16px;
-                }
-                QCheckBox::indicator {
-                    width: 20px;
-                    height: 20px;
-                }
-                QCheckBox::indicator:checked {
-                    background-color: #4da3ff;
-                    border: 1px solid #1b6bd8;
-                }
-                QCheckBox::indicator:unchecked {
-                    background-color: white;
-                    border: 1px solid #444;
-                }
-            """)
+            QCheckBox { color: black; font-size: 16px; }
+            QCheckBox::indicator { width: 20px; height: 20px; }
+            QCheckBox::indicator:checked { background-color: #4da3ff; border: 1px solid #1b6bd8; }
+            QCheckBox::indicator:unchecked { background-color: white; border: 1px solid #444; }
+        """)
         self.linkBox.stateChanged.connect(self.sync_sliders)
         bottom.addWidget(self.linkBox)
         bottom.addStretch()
 
+        # Window
         self.resize(800, 800)
         self.setMinimumSize(600, 600)
         self.setWindowTitle("Circle of Fifths")
 
     #################################################################
-    # Linked slider mechanics with cyclic rollover on the follower
+    # Linked slider mechanics
     #################################################################
     def mirrorAtoB(self, v: int):
-        if self.linkBox.isChecked():
-            slave = self.sliders[1]
-            minv, maxv = slave.minimum(), slave.maximum()
-            span = maxv - minv
-            target = v + self.offset
-            if span > 0:
-                while target < minv: target += span
-                while target > maxv: target -= span
-            step = getattr(slave, "step", 1)
-            if step > 0: target = round(target / step) * step
-            target = max(minv, min(maxv, target))
-            slave.blockSignals(True)
-            slave.setValue(int(target))
-            slave.blockSignals(False)
-            self.update_canvas()
+        if not self.linkBox.isChecked():
+            return
+        slave = self.sliders[1]
+        minv, maxv = slave.minimum(), slave.maximum()
+        span = maxv - minv
+        target = v + self.offset
+        if span > 0:
+            while target < minv: target += span
+            while target > maxv: target -= span
+        step = getattr(slave, "step", 1)
+        target = round(target / step) * step
+        slave.blockSignals(True)
+        slave.setValue(int(target))
+        slave.blockSignals(False)
+        self.update_canvas()
 
     def mirrorBtoA(self, v: int):
-        if self.linkBox.isChecked():
-            slave = self.sliders[0]
-            minv, maxv = slave.minimum(), slave.maximum()
-            span = maxv - minv
-            target = v - self.offset
-            if span > 0:
-                while target < minv: target += span
-                while target > maxv: target -= span
-            step = getattr(slave, "step", 1)
-            if step > 0: target = round(target / step) * step
-            target = max(minv, min(maxv, target))
-            slave.blockSignals(True)
-            slave.setValue(int(target))
-            slave.blockSignals(False)
-            self.update_canvas()
+        if not self.linkBox.isChecked():
+            return
+        slave = self.sliders[0]
+        minv, maxv = slave.minimum(), slave.maximum()
+        span = maxv - minv
+        target = v - self.offset
+        if span > 0:
+            while target < minv: target += span
+            while target > maxv: target -= span
+        step = getattr(slave, "step", 1)
+        target = round(target / step) * step
+        slave.blockSignals(True)
+        slave.setValue(int(target))
+        slave.blockSignals(False)
+        self.update_canvas()
 
     def sync_sliders(self):
         if self.linkBox.isChecked():
@@ -222,97 +209,87 @@ class SvgRotator(QWidget):
             self.sliders[0].setRange(-180, 180)
             self.sliders[1].setRange(-30, 150)
             try: self.sliders[0].valueChanged.disconnect(self.mirrorAtoB)
-            except TypeError: pass
+            except: pass
             try: self.sliders[1].valueChanged.disconnect(self.mirrorBtoA)
-            except TypeError: pass
+            except: pass
 
-    #################################################################
-    # Canvas repaint trigger
-    #################################################################
     def update_canvas(self):
         self.canvas.update()
 
     #################################################################
-    # Draw SVG layers (used for realtime + export rendering)
+    # Draw SVG layers and update the on-screen label
     #################################################################
     def draw_layers(self, painter: QPainter, cx: float, cy: float, size: float):
-        def draw(svg: QSvgWidget, angle: float):
+
+        # --- Helper: draw SVG layer ---
+        def draw(svg, angle):
             painter.save()
             painter.translate(cx, cy)
             painter.rotate(angle)
-            r = QRectF(-size / 2, -size / 2, size, size)
-            svg.renderer().render(painter, r)
+            rect = QRectF(-size/2, -size/2, size, size)
+            svg.renderer().render(painter, rect)
             painter.restore()
 
-        def get_tonality(slider1: float, slider2: float) -> str:
+        # --- Helper: compute tonality ---
+        def get_tonality(a, b):
+            def mode(a):
+                a = a % 360
+                idx = (a // 30) % 12
+                modes = ["Major", "Mixolydian", "Dorian", "Minor", "Phrygian",
+                         "Locrian", "", "", "", "", "", "Lydian"]
+                return modes[int(idx)]
 
-            def get_mode(angle: float) -> str:
-                angle = angle % 360
-                index = (angle // 30) % 12
-                modes = [
-                    "Major", "Mixolydian", "Dorian", "Minor", "Phrygian",
-                    "Locrian", "", "", "", "", "", "Lydian"]
-                return modes[int(index)]
+            def rotate(lst, n):
+                return lst[n:] + lst[:n]
 
-            def rotate(l, n):
-                return l[n:] + l[:n]
+            a = a % 360
+            idx = (a // 30) % 12
 
-            slider1 = slider1 % 360
-            index = (slider1 // 30) % 12
+            keys = ["G", "D", "A", "E", "B", "F#", "C#",
+                    "Ab", "Eb", "Bb", "F", "C"][::-1]
 
-            tonalities = [
-                "G", "D", "A", "E", "B",
-                "F#", "C#", "Ab", "Eb", "Bb", "F", "C"
-            ][::-1]
+            md = mode(b)
 
-            mode = get_mode(slider2)
+            shifts = {
+                "Lydian": 1, "Mixolydian": -1, "Dorian": -2,
+                "Minor": -3, "Phrygian": -4, "Locrian": -5,
+                "Major": 0
+            }
+            if md not in shifts:
+                return ""
 
-            match mode:
-                case "Lydian": tonalities = rotate(tonalities, 1)
-                case "Mixolydian": tonalities = rotate(tonalities, -1)
-                case "Dorian": tonalities = rotate(tonalities, -2)
-                case "Minor": tonalities = rotate(tonalities, -3)
-                case "Phrygian": tonalities = rotate(tonalities, -4)
-                case "Locrian": tonalities = rotate(tonalities, -5)
-                case "Major": pass
-                case _: return ""
+            keys = rotate(keys, shifts[md])
+            return keys[int(idx)] + " " + md
 
-            return tonalities[int(index)] + " " + mode
-
+        # Draw layers
         draw(self.svg1, self.sliders[0].value())
         draw(self.svg2, self.sliders[1].value())
         draw(self.svg3, 0)
 
+        # Update label
         tonality = get_tonality(self.sliders[0].value(), self.sliders[1].value())
 
-        # *********** REPLACED PRINT WITH LABEL UPDATE ***********
         if tonality != self.prev_tonality:
+            font = self.canvas.tonality_label.font()
 
-            # Create a fresh font object
-            custom_font = self.canvas.tonality_label.font()
-
-            # Example: change font size depending on the mode word
-            if any(long_word in tonality for long_word in ["Mixolydian", "Phrygian", "Locrian"]):
-            #if "Mixolydian" in tonality:
-                custom_font.setPointSize(20)   # smaller because long word
+            if any(w in tonality for w in ["Mixolydian", "Phrygian", "Locrian"]):
+                font.setPointSize(20)
             else:
-                custom_font.setPointSize(26)   # default size
+                font.setPointSize(26)
 
-            # Apply font first
-            self.canvas.tonality_label.setFont(custom_font)
-
-            # Then update text
+            self.canvas.tonality_label.setFont(font)
             self.canvas.tonality_label.setText(tonality)
 
         self.prev_tonality = tonality
 
 
     #################################################################
-    # Export wheel as PNG (2048px) or PDF (A4 centered)
+    # Export PNG / PDF
     #################################################################
     def export_wheel(self):
 
-        filename = self.prev_tonality if self.prev_tonality != "" else "circle"
+        filename = self.prev_tonality if self.prev_tonality else "circle"
+
         path, _ = QFileDialog.getSaveFileName(
             self, "Export Wheel", filename,
             "PDF Document (*.pdf);;PNG Image (*.png)"
@@ -320,8 +297,13 @@ class SvgRotator(QWidget):
         if not path:
             return
 
-        # ---- PNG ----
+        tonality = self.prev_tonality
+
+        #################################################################
+        # PNG EXPORT
+        #################################################################
         if path.lower().endswith(".png"):
+
             size = 2048
             img = QImage(size, size, QImage.Format_ARGB32)
             img.fill(Qt.white)
@@ -330,13 +312,36 @@ class SvgRotator(QWidget):
             cx = size * 0.5
             cy = size * 0.5
             diameter = size * 0.90
-            self.draw_layers(p, cx, cy, diameter)
+
+            # Draw SVG layers
+            self.draw_layers(p, cx, cy + 20, diameter)
+
+            # Draw label (scaled proportional to wheel)
+            export_font = QFont(self.canvas.tonality_label.font())
+
+            # Scale font relative to image resolution
+            export_font.setPointSize(int(size * 0.035))   # ~3.5% of image height
+            p.setFont(export_font)
+
+            fm = p.fontMetrics()
+            tw = fm.horizontalAdvance(tonality)
+            th = fm.height()
+
+            # Vertical offset based on wheel diameter (natural-looking)
+            y = cy + th * 0.35
+
+            p.setPen(QColor("#701e22"))
+            p.drawText(int(cx - tw/2), int(y), tonality)
+
             p.end()
             img.save(path)
             return
 
-        # ---- PDF ----
+        #################################################################
+        # PDF EXPORT
+        #################################################################
         if path.lower().endswith(".pdf"):
+
             pdf = QPdfWriter(path)
             pdf.setPageSize(QPageSize(QPageSize.A4))
 
@@ -351,9 +356,29 @@ class SvgRotator(QWidget):
             cx = circle * 0.5
             cy = circle * 0.5
             diameter = circle * 0.90
-            self.draw_layers(p_img, cx, cy, diameter)
+
+            # Draw SVG layers
+            self.draw_layers(p_img, cx, cy+70, diameter)
+
+            # Draw label (scaled proportional to PDF circle size)
+            export_font = QFont(self.canvas.tonality_label.font())
+
+            # PDF scaling: circle is in *PDF units*, we scale relative to circle diameter
+            export_font.setPointSize(int(circle * 0.035))  # ~3.5% of diameter
+            p_img.setFont(export_font)
+
+            fm = p_img.fontMetrics()
+            tw = fm.horizontalAdvance(tonality)
+            th = fm.height()
+
+            y = cy + th * 0.35   # same proportional vertical shift
+
+            p_img.setPen(QColor("#701e22"))
+            p_img.drawText(int(cx - tw/2), int(y), tonality)
+
             p_img.end()
 
+            # Draw the image onto the PDF
             p_pdf = QPainter(pdf)
             x = (page_w - circle) // 2
             y = (page_h - circle) // 2
