@@ -6,7 +6,7 @@
    version="1.1"
    id="svg72"
    sodipodi:docname="22.svg"
-   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,11 +23,11 @@
      inkscape:document-units="mm"
      inkscape:zoom="1.0463068"
      inkscape:cx="256.13902"
-     inkscape:cy="266.17431"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="1912"
-     inkscape:window-y="-7"
+     inkscape:cy="265.21858"
+     inkscape:window-width="2400"
+     inkscape:window-height="1271"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="g151" />
   <style
@@ -79,317 +79,307 @@
      id="g151"
      transform="matrix(0.98,0,0,0.98,-0.07394486,-0.07483462)">
     <g
-       id="g2"
-       style="fill:#701e22;fill-opacity:1;stroke-width:0.999794;stroke-dasharray:none"
-       transform="matrix(0.99419032,0,0,0.99418236,-6.8116346e-4,0.00168161)">
-      <circle
-         cx="0.00064109458"
-         cy="0.00076349301"
-         r="1.5"
-         fill="#000000"
-         id="circle37-4"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         transform="rotate(-10)" />
+       id="g2">
       <text
-         font-size="5.5px"
+         font-size="5.46802px"
          id="text37"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="0.010037724"
-         y="-87.107376"
-         transform="rotate(-10)">I</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="0.0090165464"
+         y="-86.599426"
+         transform="matrix(0.9848117,-0.17364749,0.17364887,0.98480381,0,0)">I</text>
       <text
-         font-size="5.5px"
+         font-size="5.46802px"
          id="text38"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.0084659569"
-         y="-87.107796"
-         transform="rotate(20)">V</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.0084816739"
+         y="-86.599571"
+         transform="matrix(0.93969638,0.34201877,-0.34202152,0.93968886,0,0)">V</text>
       <text
-         font-size="5.5px"
+         font-size="5.46802px"
          id="text39"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="0.010377516"
-         y="-87.108315"
-         transform="rotate(50)">II</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="0.011167536"
+         y="-86.600296"
+         transform="matrix(0.64279018,0.76604138,-0.76604751,0.64278503,0,0)">II</text>
       <text
-         font-size="5.5px"
+         font-size="5.46802px"
          id="text40"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.23422465"
-         y="-87.10878"
-         transform="rotate(80)">VI</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.23132516"
+         y="-86.601395"
+         transform="matrix(0.17364887,0.98480381,-0.9848117,0.17364749,0,0)">VI</text>
       <text
-         font-size="5.5px"
+         font-size="5.46802px"
          id="text41"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="0.0097387033"
-         y="-87.10907"
-         transform="rotate(110)">III</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="0.01149526"
+         y="-86.602585"
+         transform="matrix(-0.34202152,0.93968886,-0.93969638,-0.34201877,0,0)">III</text>
       <text
-         font-size="5.5px"
+         font-size="5.46802px"
          id="text42"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.23515835"
-         y="-87.109116"
-         transform="rotate(140)">VII</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.23218851"
+         y="-86.603546"
+         transform="matrix(-0.76604751,0.64278503,-0.64279018,-0.76604138,0,0)">VII</text>
       <text
-         font-size="5.5px"
+         font-size="5.46802px"
          id="text43"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="0.50827283"
-         y="-87.095474"
-         transform="rotate(170)">♭V</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="0.50628072"
+         y="-86.590668"
+         transform="matrix(-0.9848117,0.17364749,-0.17364887,-0.98480381,0,0)">♭V</text>
       <text
-         font-size="5.5px"
+         font-size="5.46802px"
          id="text44"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="0.27425247"
-         y="-87.106468"
-         transform="rotate(-160)">♭II</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="0.27272299"
+         y="-86.601875"
+         transform="matrix(-0.93969638,-0.34201877,0.34202152,-0.93968886,0,0)">♭II</text>
       <text
-         font-size="5.5px"
+         font-size="5.46802px"
          id="text45"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="0.27420744"
-         y="-87.09655"
-         transform="rotate(-130)">♭VI</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="0.27176294"
+         y="-86.591805"
+         transform="matrix(-0.64279018,-0.76604138,0.76604751,-0.64278503,0,0)">♭VI</text>
       <text
-         font-size="5.5px"
+         font-size="5.46802px"
          id="text46"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="0.28256449"
-         y="-87.09407"
-         transform="rotate(-100)">♭III</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="0.27938396"
+         y="-86.588699"
+         transform="matrix(-0.17364887,-0.98480381,0.9848117,-0.17364749,0,0)">♭III</text>
       <text
-         font-size="5.5px"
+         font-size="5.46802px"
          id="text47"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="0.27484527"
-         y="-87.105194"
-         transform="rotate(-70)">♭VII</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="0.27143425"
+         y="-86.598862"
+         transform="matrix(0.34202152,-0.93968886,0.93969638,0.34201877,0,0)">♭VII</text>
       <text
-         font-size="5.5px"
+         font-size="5.46802px"
          id="text48"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="0.23515747"
-         y="-87.107162"
-         transform="rotate(-40)">IV</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="0.23218763"
+         y="-86.599899"
+         transform="matrix(0.76604751,-0.64278503,0.64279018,0.76604138,0,0)">IV</text>
       <text
-         font-size="5.6px"
+         font-size="5.56744px"
          id="text49"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.037984736"
-         y="-66.70298"
-         transform="rotate(-10)">vi</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.038726728"
+         y="-66.313652"
+         transform="matrix(0.9848117,-0.17364749,0.17364887,0.98480381,0,0)">vi</text>
       <text
-         font-size="5.6px"
+         font-size="5.56744px"
          id="text50"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-9.167572e-05"
-         y="-66.7034"
-         transform="rotate(20)">iii</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.00015607766"
+         y="-66.313797"
+         transform="matrix(0.93969638,0.34201877,-0.34202152,0.93968886,0,0)">iii</text>
       <text
-         font-size="5.6px"
+         font-size="5.56744px"
          id="text51"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="0.022147983"
-         y="-66.669403"
-         transform="rotate(50)">vii</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="0.022869574"
+         y="-66.280205"
+         transform="matrix(0.64279018,0.76604138,-0.76604751,0.64278503,0,0)">vii</text>
       <text
-         font-size="5.6px"
+         font-size="5.56744px"
          id="text52"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.00026468086"
-         y="-66.704384"
-         transform="rotate(80)">#iv</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="0.0012746447"
+         y="-66.315628"
+         transform="matrix(0.17364887,0.98480381,-0.9848117,0.17364749,0,0)">#iv</text>
       <text
-         font-size="5.6px"
+         font-size="5.56744px"
          id="text53"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.047392398"
-         y="-66.708946"
-         transform="rotate(110)">#i</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.045303702"
+         y="-66.32106"
+         transform="matrix(-0.34202152,0.93968886,-0.93969638,-0.34201877,0,0)">#i</text>
       <text
-         font-size="5.6px"
+         font-size="5.56744px"
          id="text54"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.068390958"
-         y="-66.596886"
-         transform="rotate(140)">#v</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.066390634"
+         y="-66.210564"
+         transform="matrix(-0.76604751,0.64278503,-0.64279018,-0.76604138,0,0)">#v</text>
       <text
-         font-size="5.6px"
+         font-size="5.56744px"
          id="text55"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="0.086861685"
-         y="-66.701088"
-         transform="rotate(170)">♭iii</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="0.087319523"
+         y="-66.31485"
+         transform="matrix(-0.9848117,0.17364749,-0.17364887,-0.98480381,0,0)">♭iii</text>
       <text
-         font-size="5.6px"
+         font-size="5.56744px"
          id="text56"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="0.084494866"
-         y="-66.703575"
-         transform="rotate(-160)">♭vii</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="0.084068574"
+         y="-66.317596"
+         transform="matrix(-0.93969638,-0.34201877,0.34202152,-0.93968886,0,0)">♭vii</text>
       <text
-         font-size="5.6px"
+         font-size="5.56744px"
          id="text57"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.022489781"
-         y="-66.600006"
-         transform="rotate(-130)">iv</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.023209384"
+         y="-66.214417"
+         transform="matrix(-0.64279018,-0.76604138,0.76604751,-0.64278503,0,0)">iv</text>
       <text
-         font-size="5.6px"
+         font-size="5.56744px"
          id="text58"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.0017861003"
-         y="-66.703102"
-         transform="rotate(-100)">i</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.0033135035"
+         y="-66.316277"
+         transform="matrix(-0.17364887,-0.98480381,0.9848117,-0.17364749,0,0)">i</text>
       <text
-         font-size="5.6px"
+         font-size="5.56744px"
          id="text59"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="0.00034384179"
-         y="-66.564728"
-         transform="rotate(-70)">v</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.0014713308"
+         y="-66.177811"
+         transform="matrix(0.34202152,-0.93968886,0.93969638,0.34201877,0,0)">v</text>
       <text
-         font-size="5.6px"
+         font-size="5.56744px"
          id="text60"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.00085351802"
-         y="-66.702766"
-         transform="rotate(-40)">ii</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.0024512778"
+         y="-66.314125"
+         transform="matrix(0.76604751,-0.64278503,0.64279018,0.76604138,0,0)">ii</text>
       <text
-         font-size="4.5px"
+         font-size="4.47384px"
          id="text61"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.012789425"
-         y="-46.617268"
-         transform="rotate(-10)">vii°</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.013677894"
+         y="-46.344711"
+         transform="matrix(0.9848117,-0.17364749,0.17364887,0.98480381,0,0)">vii°</text>
       <text
-         font-size="4.5px"
+         font-size="4.47384px"
          id="text62"
          dx="0 0 0 0"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.036002297"
-         y="-46.654293"
-         transform="rotate(20)">#iv°</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.035857927"
+         y="-46.381248"
+         transform="matrix(0.93969638,0.34201877,-0.34202152,0.93968886,0,0)">#iv°</text>
       <text
-         font-size="4.5px"
+         font-size="4.47384px"
          id="text63"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.063856594"
-         y="-46.644474"
-         transform="rotate(50)">#i°</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.062635005"
+         y="-46.371696"
+         transform="matrix(0.64279018,0.76604138,-0.76604751,0.64278503,0,0)">#i°</text>
       <text
-         font-size="4.5px"
+         font-size="4.47384px"
          id="text64"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.013277375"
-         y="-46.615612"
-         transform="rotate(80)">#v°</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.011662398"
+         y="-46.343643"
+         transform="matrix(0.17364887,0.98480381,-0.9848117,0.17364749,0,0)">#v°</text>
       <text
-         font-size="4.5px"
+         font-size="4.47384px"
          id="text65"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.040104769"
-         y="-46.661648"
-         transform="rotate(110)">#ii°</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.038058441"
+         y="-46.390308"
+         transform="matrix(-0.34202152,0.93968886,-0.93969638,-0.34201877,0,0)">#ii°</text>
       <text
-         font-size="4.5px"
+         font-size="4.47384px"
          id="text66"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.065006964"
-         y="-46.645279"
-         transform="rotate(140)">#vi°</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.063026316"
+         y="-46.37495"
+         transform="matrix(-0.76604751,0.64278503,-0.64279018,-0.76604138,0,0)">#vi°</text>
       <text
-         font-size="4.5px"
+         font-size="4.47384px"
          id="text67"
          dx="0 0 0"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         y="-46.618786"
-         x="-0.00063831126"
-         transform="rotate(170)">iv°</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         y="-46.349297"
+         x="0.00032822171"
+         transform="matrix(-0.9848117,0.17364749,-0.17364887,-0.98480381,0,0)">iv°</text>
       <text
-         font-size="4.5px"
+         font-size="4.47384px"
          id="text68"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.024697239"
-         y="-46.659527"
-         transform="rotate(-160)">i°</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.024488723"
+         y="-46.390076"
+         transform="matrix(-0.93969638,-0.34201877,0.34202152,-0.93968886,0,0)">i°</text>
       <text
-         font-size="4.5px"
+         font-size="4.47384px"
          id="text69"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.041205261"
-         y="-46.633327"
-         transform="rotate(-130)">v°</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.041816059"
+         y="-46.363819"
+         transform="matrix(-0.64279018,-0.76604138,0.76604751,-0.64278503,0,0)">v°</text>
       <text
-         font-size="4.5px"
+         font-size="4.47384px"
          id="text70"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.00076070969"
-         y="-46.61739"
-         transform="rotate(-100)">ii°</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.002294074"
+         y="-46.347336"
+         transform="matrix(-0.17364887,-0.98480381,0.9848117,-0.17364749,0,0)">ii°</text>
       <text
-         font-size="4.5px"
+         font-size="4.47384px"
          id="text71"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.016176816"
-         y="-46.621265"
-         transform="rotate(-70)">vi°</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.017895943"
+         y="-46.350288"
+         transform="matrix(0.34202152,-0.93968886,0.93969638,0.34201877,0,0)">vi°</text>
       <text
-         font-size="4.5px"
+         font-size="4.47384px"
          id="text72"
-         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.999794;stroke-dasharray:none;stroke-opacity:1"
-         x="-0.047981214"
-         y="-46.644852"
-         transform="rotate(-40)">iii°</text>
-    </g>
-    <g
-       id="g1"
-       style="fill:#701e22;fill-opacity:1;stroke:#701e22;stroke-opacity:1">
-      <text
-         x="1.1430843"
-         y="-93.270000"
-         transform="rotate(-90)"
-         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
-         id="text1">Aeolian</text>
-      <text
-         x="0.047721207"
-         y="-93.274765"
-         transform="rotate(-60)"
-         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
-         id="text2">Dorian</text>
-      <!-- reference -->
-      <text
-         x="2.6406405"
-         y="-93.274765"
-         transform="rotate(30)"
-         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
-         id="text3">Lydian</text>
-      <text
-         x="0.80021536"
-         y="-93.274765"
-         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
-         id="text4">Ioninan</text>
-      <text
-         x="-0.36738724"
-         y="-93.274765"
-         transform="rotate(-30)"
-         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
-         id="text5">Mixolydian</text>
-      <text
-         x="0.64857215"
-         y="-93.274765"
-         transform="rotate(-120)"
-         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
-         id="text6">Phrygian</text>
-      <text
-         x="2.180074"
-         y="-93.274765"
-         transform="rotate(-150)"
-         style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
-         id="text7">Locrian</text>
+         style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
+         x="-0.049304988"
+         y="-46.372826"
+         transform="matrix(0.76604751,-0.64278503,0.64279018,0.76604138,0,0)">iii°</text>
+      <g
+         id="g1"
+         style="fill:#701e22;fill-opacity:1;stroke:#701e22;stroke-opacity:1">
+        <text
+           x="1.1430843"
+           y="-93.270000"
+           transform="rotate(-90)"
+           style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+           id="text1">Aeolian</text>
+        <text
+           x="0.047721207"
+           y="-93.274765"
+           transform="rotate(-60)"
+           style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+           id="text2">Dorian</text>
+        <!-- reference -->
+        <text
+           x="2.6406405"
+           y="-93.274765"
+           transform="rotate(30)"
+           style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+           id="text3">Lydian</text>
+        <text
+           x="0.80021536"
+           y="-93.274765"
+           style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+           id="text4">Ioninan</text>
+        <text
+           x="-0.36738724"
+           y="-93.274765"
+           transform="rotate(-30)"
+           style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+           id="text5">Mixolydian</text>
+        <text
+           x="0.64857215"
+           y="-93.274765"
+           transform="rotate(-120)"
+           style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+           id="text6">Phrygian</text>
+        <text
+           x="2.180074"
+           y="-93.274765"
+           transform="rotate(-150)"
+           style="font-size:7.12683px;font-family:Arial;stroke-width:0.30303;stroke:#701e22;fill:#701e22;fill-opacity:1;stroke-opacity:1"
+           id="text7">Locrian</text>
+      </g>
     </g>
   </g>
   <rect
