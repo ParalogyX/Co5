@@ -334,7 +334,7 @@ class SvgRotator(QWidget):
             p.drawText(int(cx - tw/2), int(y), tonality)
 
             p.end()
-            img.save(path)
+            img.save(path, "PNG", quality=100)
             return
 
         #################################################################
@@ -344,6 +344,7 @@ class SvgRotator(QWidget):
 
             pdf = QPdfWriter(path)
             pdf.setPageSize(QPageSize(QPageSize.A4))
+            pdf.setResolution(600)
 
             page_w = pdf.width()
             page_h = pdf.height()

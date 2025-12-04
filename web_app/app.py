@@ -111,7 +111,7 @@ def export():
         with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
             name = tmp.name
 
-        final.save(name, "PNG")
+        final.save(name, "PNG", quality=100)
         data = open(name, "rb").read()
         os.remove(name)
 
@@ -129,6 +129,7 @@ def export():
 
         pdf = QPdfWriter(name)
         pdf.setPageSize(QPageSize(QPageSize.A4))
+        pdf.setResolution(600)
 
         p = QPainter(pdf)
 
