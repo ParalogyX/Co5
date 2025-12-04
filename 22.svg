@@ -21,15 +21,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.0463068"
-     inkscape:cx="256.13902"
-     inkscape:cy="265.21858"
+     inkscape:zoom="1.4797013"
+     inkscape:cx="413.597"
+     inkscape:cy="283.50317"
      inkscape:window-width="2400"
      inkscape:window-height="1271"
      inkscape:window-x="2391"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g151" />
+     inkscape:current-layer="g2" />
   <style
      id="style1">
     .seg {
@@ -191,21 +191,21 @@
          style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
          x="0.0012746447"
          y="-66.315628"
-         transform="matrix(0.17364887,0.98480381,-0.9848117,0.17364749,0,0)">#iv</text>
+         transform="matrix(0.17364887,0.98480381,-0.9848117,0.17364749,0,0)">♯iv</text>
       <text
          font-size="5.56744px"
          id="text53"
          style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
          x="-0.045303702"
          y="-66.32106"
-         transform="matrix(-0.34202152,0.93968886,-0.93969638,-0.34201877,0,0)">#i</text>
+         transform="matrix(-0.34202152,0.93968886,-0.93969638,-0.34201877,0,0)">♯i</text>
       <text
          font-size="5.56744px"
          id="text54"
          style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
          x="-0.066390634"
          y="-66.210564"
-         transform="matrix(-0.76604751,0.64278503,-0.64279018,-0.76604138,0,0)">#v</text>
+         transform="matrix(-0.76604751,0.64278503,-0.64279018,-0.76604138,0,0)">♯v</text>
       <text
          font-size="5.56744px"
          id="text55"
@@ -262,35 +262,35 @@
          style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
          x="-0.035857927"
          y="-46.381248"
-         transform="matrix(0.93969638,0.34201877,-0.34202152,0.93968886,0,0)">#iv°</text>
+         transform="matrix(0.93969638,0.34201877,-0.34202152,0.93968886,0,0)">♯iv°</text>
       <text
          font-size="4.47384px"
          id="text63"
          style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
          x="-0.062635005"
          y="-46.371696"
-         transform="matrix(0.64279018,0.76604138,-0.76604751,0.64278503,0,0)">#i°</text>
+         transform="matrix(0.64279018,0.76604138,-0.76604751,0.64278503,0,0)">♯i°</text>
       <text
          font-size="4.47384px"
          id="text64"
          style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
          x="-0.011662398"
          y="-46.343643"
-         transform="matrix(0.17364887,0.98480381,-0.9848117,0.17364749,0,0)">#v°</text>
+         transform="matrix(0.17364887,0.98480381,-0.9848117,0.17364749,0,0)">♯v°</text>
       <text
          font-size="4.47384px"
          id="text65"
          style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
          x="-0.038058441"
          y="-46.390308"
-         transform="matrix(-0.34202152,0.93968886,-0.93969638,-0.34201877,0,0)">#ii°</text>
+         transform="matrix(-0.34202152,0.93968886,-0.93969638,-0.34201877,0,0)">♯ii°</text>
       <text
          font-size="4.47384px"
          id="text66"
          style="fill:#701e22;fill-opacity:1;stroke:none;stroke-width:0.993982;stroke-dasharray:none;stroke-opacity:1"
          x="-0.063026316"
          y="-46.37495"
-         transform="matrix(-0.76604751,0.64278503,-0.64279018,-0.76604138,0,0)">#vi°</text>
+         transform="matrix(-0.76604751,0.64278503,-0.64279018,-0.76604138,0,0)">♯vi°</text>
       <text
          font-size="4.47384px"
          id="text67"
