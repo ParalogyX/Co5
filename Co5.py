@@ -320,7 +320,7 @@ class SvgRotator(QWidget):
             export_font = QFont(self.canvas.tonality_label.font())
 
             # Scale font relative to image resolution
-            export_font.setPointSize(int(size * 0.035))   # ~3.5% of image height
+            export_font.setPointSize(int(size * 0.025))   # ~2.5% of image height
             p.setFont(export_font)
 
             fm = p.fontMetrics()
@@ -364,7 +364,7 @@ class SvgRotator(QWidget):
             export_font = QFont(self.canvas.tonality_label.font())
 
             # PDF scaling: circle is in *PDF units*, we scale relative to circle diameter
-            export_font.setPointSize(int(circle * 0.035))  # ~3.5% of diameter
+            export_font.setPointSize(int(circle * 0.025))  # ~2.5% of diameter
             p_img.setFont(export_font)
 
             fm = p_img.fontMetrics()
