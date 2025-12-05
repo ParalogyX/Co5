@@ -71,6 +71,7 @@ class SvgRotator(QWidget):
         super().__init__()
 
         self.prev_tonality = ""
+        self.prev_size = 0
         self.scale_UI = 0.90
         self.offset = 0
 
@@ -220,7 +221,7 @@ class SvgRotator(QWidget):
     # Draw SVG layers and update the on-screen label
     #################################################################
     def draw_layers(self, painter: QPainter, cx: float, cy: float, size: float):
-
+        #print(size)
         # --- Helper: draw SVG layer ---
         def draw(svg, angle):
             painter.save()
@@ -269,18 +270,23 @@ class SvgRotator(QWidget):
         # Update label
         tonality = get_tonality(self.sliders[0].value(), self.sliders[1].value())
 
-        if tonality != self.prev_tonality:
+        # Update if tonality changed or window was resized
+        if (tonality != self.prev_tonality) or (size != self.prev_size):
             font = self.canvas.tonality_label.font()
 
+            # get font scaling factor from the window size
+            sc_factor = size / 600.0
+
             if any(w in tonality for w in ["Mixolydian", "Phrygian", "Locrian"]):
-                font.setPointSize(20)
+                font.setPointSize(20 * sc_factor)
             else:
-                font.setPointSize(26)
+                font.setPointSize(26 * sc_factor)
 
             self.canvas.tonality_label.setFont(font)
             self.canvas.tonality_label.setText(tonality)
 
         self.prev_tonality = tonality
+        self.prev_size = size
 
 
     #################################################################
